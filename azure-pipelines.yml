@@ -33,7 +33,7 @@ steps:
   displayName: Upload to Azure Storage Account
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   inputs:
-    azureSubscription: '${subscriptionName}'
+    azureSubscription: '$(subscriptionName)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
